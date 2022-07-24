@@ -41,13 +41,13 @@ function Homepage() {
                             </p> */
         } 
         <div className = "icons" >
-        <a href = "https://www.facebook.com/robiulhr01" className = "icon i-facebook" >
+        <a href = "https://www.facebook.com/robiulhr01" target={'_blank'} className = "icon i-facebook" >
         <FacebookIcon / >
         </a> 
-        <a href = "https://github.com/robiulhasanrohan" className = "icon i-github" >
+        <a href = "https://github.com/robiulhr" target={'_blank'} className = "icon i-github" >
         <GithubIcon / >
         </a> 
-        <a href = "https://www.linkedin.com/in/robiulhr/" className = "icon i-youtube" >
+        <a href = "https://www.linkedin.com/in/robiulhr/" target={'_blank'} className = "icon i-youtube" >
         <LinkedInIcon / >
         </a> 
         </div > 
