@@ -58,6 +58,14 @@ const ContactItemStyled = styled.div`
             margin-top: 5rem;
         }   
     }
+    @media screen and (max-width: 900px){
+        padding: .5rem 1rem;
+
+    }
+    @media screen and (max-width: 600px){
+        padding: .5rem .1rem;
+
+    }
 `
 export default Contactitem
 
