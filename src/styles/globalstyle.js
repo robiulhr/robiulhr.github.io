@@ -58,7 +58,6 @@ const GlobalStyled = createGlobalStyle`
     list-style: none;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
-    text-transform: capitalize;
     // user unselectable
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -102,6 +101,8 @@ a{
 h1{
     font-size:2rem;
     color: var(--white-color);
+    text-transform: capitalize;
+
     span{
         font-size:3rem
     }

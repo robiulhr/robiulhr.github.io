@@ -71,6 +71,7 @@ flex-direction: row;
     .paragraph{
         padding: .7rem 0;
         font-size: 1rem;
+        text-transform: capitalize;
 
     }
     .about-info{

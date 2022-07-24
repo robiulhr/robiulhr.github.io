@@ -6,37 +6,37 @@ import blog4 from '../img/blogs/blog4.jpg'
 const blogs = [
     {
         id: 1,
-        title: 'How To Tse Seo Efficiently',
+        title: 'Web Design And Development',
         date: '01',
         month: 'April',
         image: blog1,
-        link: 'https://www.google.com/'
+        link: '#'
     },
     {
         id: 2,
-        title: 'How To Tse Seo Efficiently',
+        title: 'Web Design And Development',
         date: '01',
         month: 'April',
         image: blog2,
-        link: 'https://www.google.com/'
+        link: '#'
 
     },
     {
         id: 3,
-        title: 'How To Tse Seo Efficiently',
+        title: 'Web Design And Development',
         date: '01',
         month: 'April',
         image: blog3,
-        link: 'https://www.google.com/'
+        link: '#'
 
     },
     {
         id: 4,
-        title: 'How To Tse Seo Efficiently',
+        title: 'Web Design And Development',
         date: '01',
         month: 'April',
         image: blog4,
-        link: 'https://www.google.com/'
+        link: '#'
 
     }
 ]
