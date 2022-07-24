@@ -8,7 +8,7 @@ function Reviewitem({ text }) {
     )
 }
 const ReviewitemStyled = Styled.div`
-height: 15vh;
+max-height: 150px;
 padding: 2rem 1rem;
 border-left: 6px solid var(--border-color);
 background: var(--background-dark-gray);
@@ -30,5 +30,34 @@ p{
     padding: 0.5rem;
 
 }
+@media screen and (max-width: 1000px){
+width: 80%;
+ &:not(:first-child){
+    margin-left:0;
+    margin-top:3rem
+ }
+
+}
+@media screen and (max-width: 700px){
+width: 100%;
+height: 250px;
+    p{
+        font-size:1.2rem;
+
+    }
+
+}
+@media screen and (max-width: 500px){
+width: 100%;
+height: 200px;
+    p{
+     font-size:.9rem;
+
+    }
+}
+@media screen and (max-width: 400px){
+    height: 350px;
+}
+
 `
 export default Reviewitem

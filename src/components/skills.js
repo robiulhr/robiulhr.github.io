@@ -9,34 +9,31 @@ function Skills() {
             <Title title="Skills" span={'Skills'} />
             <InnerLayout>
                 <div className="skills">
-                    <Progressbar title={'HTML 5'}
-                        width={'70%'}
-                        text={'70%'}
-                    />
-                    <Progressbar title={'CSS'}
+                    <Progressbar title={'Web Design'}
                         width={'80%'}
                         text={'80%'}
                     />
-                    <Progressbar title={'BOOTSTRAP'}
-                        width={'95%'}
-                        text={'95%'}
-                    />
-                    <Progressbar title={'JAVASCRIPT'}
-                        width={'50%'}
-                        text={'50%'}
-                    />
-                    <Progressbar title={'REACT JS'}
-                        width={'40%'}
-                        text={'40%'}
-                    />
-                    <Progressbar title={'NODE JS'}
-                        width={'30%'}
-                        text={'30%'}
-                    />
-                    <Progressbar title={'C'}
+                    <Progressbar title={'Front End Development'}
                         width={'70%'}
                         text={'70%'}
                     />
+                    <Progressbar title={'Website Maintenance And Bug Fixing'}
+                        width={'70%'}
+                        text={'70%'}
+                    />
+                    <Progressbar title={'Back End Development'}
+                        width={'50%'}
+                        text={'50%'}
+                    />
+                    <Progressbar title={'Problem Solving'}
+                        width={'40%'}
+                        text={'40%'}
+                    />
+                    <Progressbar title={'Extension Development'}
+                        width={'60%'}
+                        text={'60%'}
+                    />
+                    
                 </div>
             </InnerLayout>
         </SkilssStyled>
@@ -51,5 +48,12 @@ const SkilssStyled = styled.div`
         grid-column-gap: 2rem;
 
     }
+    @media screen and (max-width: 950px){
+        .skills{
+        grid-template-columns: none;
+
+    } 
+
+}
 `
 export default Skills

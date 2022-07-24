@@ -2,12 +2,21 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
 import avatar from '../img/img01.jpg';
+import Tilty from 'react-tilty';
+
 function Navigation() {
+
     return (
         <NavigationStyled>
-            <div className="avatar">
-                <img src={avatar} alt=""></img>
-            </div>
+               
+                    <div className="avatar">
+                        <Tilty style={{ transformStyle: 'preserve-3d' }}>
+                                <img src={avatar} style={{ transform: 'translateZ(50px)' }} alt=""></img>
+                        </Tilty>
+
+                    </div>
+                    
+           
             <ul className="nav-items">
                 <li className="nav-item">
                     <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
@@ -30,7 +39,7 @@ function Navigation() {
             </ul>
             <footer className="footer">
                 <p>
-                    @ 2021 My  portfolio Website
+                    @ 2022 My  portfolio Website
                 </p>
             </footer>
         </NavigationStyled>
@@ -44,6 +53,8 @@ align-items: center;
 height: 100%;
 width: 100%;
 border-right: 1px solid var(--border-color);
+position: relative;
+       
     .avatar{
         width: 100%;
         border-bottom: 1px solid var(--border-color);
@@ -53,6 +64,7 @@ border-right: 1px solid var(--border-color);
             width: 70%;
             border-radius: 50%;
             border: 8px solid var(--border-color);
+            
         }
     }
     .nav-items{
@@ -105,5 +117,6 @@ footer{
         text-align: center;
     }
 }
+
 `
 export default Navigation;

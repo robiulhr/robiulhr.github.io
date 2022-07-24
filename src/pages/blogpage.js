@@ -70,5 +70,11 @@ const BlogsStyled = styled.div`
        
     }
 }
+@media screen and (max-width: 700px){
+    .blog{
+    grid-template-columns: repeat(1,1fr);
+        
+    }
+}
 `
 export default Blogpage

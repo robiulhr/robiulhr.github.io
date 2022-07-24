@@ -1,10 +1,10 @@
 import React from 'react'
 import Styled from 'styled-components'
-function Servicecard({ image, title, paragraph }) {
+function Servicecard({ Image, title, paragraph }) {
     return (
         <ServicecardStyled>
             <div className="container">
-                <img src={image} alt="" />
+                {Image}
                 <h4 >{title}</h4>
                 <p>{paragraph}</p>
             </div>
@@ -19,12 +19,15 @@ const ServicecardStyled = Styled.div`
     border-right:1px solid var(--border-color);
     border-bottom:1px solid var(--border-color);
     transition: all .4s ease-in-out;
+    
+
     &:hover{
     border-top:8px solid var(--primary-color);
     transform: translateY(3px)
-     
     }
-
+    svg{
+        font-size:5rem;
+    }
     div.container{
          padding: 1.2rem;
             img{
@@ -35,6 +38,8 @@ const ServicecardStyled = Styled.div`
                 font-size:1.6rem;
                 padding: 1rem 0 ;
                 position: relative;
+                text-transform:capitalize;
+
                 &::after{
                     content: '';
                     width: 2rem;
@@ -49,8 +54,10 @@ const ServicecardStyled = Styled.div`
             }
             p{
                  padding: .8rem;
+                 text-transform:capitalize;
             }
     }
+ 
 
 `
 export default Servicecard

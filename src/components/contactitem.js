@@ -49,6 +49,15 @@ const ContactItemStyled = styled.div`
             padding: .1rem 0;
         }
     }
+
+    @media screen and (max-width: 900px){
+         &:not(:first-child){
+            margin-top: 1.5rem ;
+         }  
+        &:first-child{
+            margin-top: 5rem;
+        }   
+    }
 `
 export default Contactitem
 

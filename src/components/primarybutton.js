@@ -2,7 +2,7 @@ import React from 'react'
 import Styled from 'styled-components'
 function Primarybutton({ title }) {
     return (
-        <PrimarybuttonStyled>
+        <PrimarybuttonStyled href="../resume/Robiul Hasan-Resume.pdf" download={true}>
             {title}
         </PrimarybuttonStyled>
     )

@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import styled from "styled-components";
 import Sidebar from "./components/sidebar";
 import Homepage from "./pages/homepage";
@@ -7,12 +7,56 @@ import Resumepage from './pages/resumepage'
 import Portfoliopage from './pages/portfoliopage'
 import Blogpage from './pages/blogpage'
 import ContactPage from "./pages/contactpage";
-import { Route, Switch } from 'react-router';
-import NoMatch from './pages/nomatchpage'
+import { Route, Switch as Switching} from 'react-router';
+import NoMatch from './pages/nomatchpage';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Switch from '@mui/material/Switch';
+import MenuIcon from '@mui/icons-material/Menu';
+
+
+
 function App() {
+  const [theme,setTheme ] = useState("dark-theme");
+  const [checked,setChecked] = useState(false);
+  const [sidebarStatus,setSideBarStatus] = useState(true);
+  useEffect(() => {
+    document.documentElement.className = theme;
+
+  }, [theme]);
+
+  const sideBarOpenClose= ()=> sidebarStatus? setSideBarStatus(false): setSideBarStatus(true);
+  const themeToggler=()=>{
+    if(theme==="light-theme"){
+      setTheme("dark-theme");
+      setChecked(false)
+    }else{
+      setTheme("light-theme");
+      setChecked(true)
+    }
+  }
+
   return (
     <div className="App">
-      <Sidebar />
+
+      <Sidebar  sidebarStatus={sidebarStatus} />
+      <div className="hamburger-menu-icon-section" onClick={sideBarOpenClose}>
+            <MenuIcon/>
+        </div>
+      <div className="theme">
+        <div className="light-dark-mode">
+            <div className="light-content">
+              <Brightness4Icon/>
+            </div>
+            <div className="night-content">
+            <Switch
+              checked={checked}
+              onClick={themeToggler}
+              inputProps={{ 'aria-label': 'controlled' }}
+              size="medium"
+            />
+            </div>
+          </div>
+      </div>
       <MainContentStyled>
         <div className="lines">
           <div className="line-1"></div>
@@ -21,7 +65,7 @@ function App() {
           <div className="line-4"></div>
         </div>
 
-        <Switch>
+        <Switching>
           <Route path="/" exact>
             <Homepage />
           </Route>
@@ -43,7 +87,7 @@ function App() {
           <Route path="*">
             <NoMatch />
           </Route>
-        </Switch>
+        </Switching>
       </MainContentStyled>
     </div>
   );
@@ -52,7 +96,8 @@ const MainContentStyled = styled.main`
 position: relative;
 margin-left: 16.3rem;
 min-height: 100vh;
-/* background-color: red; */
+
+  
   .lines{
     position: absolute;
     min-height: 100%;
@@ -67,5 +112,9 @@ min-height: 100vh;
     }
 
   }
+  @media screen and (max-width: 1200px){
+  margin-left: 0;
+
+}
 `
 export default App;

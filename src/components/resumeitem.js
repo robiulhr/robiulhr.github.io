@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+
 function Resumeitem({ year, title, subTitle, text }) {
     return (
         <ResumeitemStyled>
@@ -21,7 +22,7 @@ display: flex;
     padding-bottom: 3rem;
 }
 .left-content{
-    width: 50%;
+    width: 20%;
     padding-left: 20px;
     position: relative;
     &::before{
@@ -44,6 +45,7 @@ display: flex;
 .right-content{
     padding-left: 5rem;
     position: relative;
+    width: 80%;
     &::before{
         content:"";
         position: absolute;

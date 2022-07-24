@@ -44,9 +44,9 @@ function contactpage() {
                         </form>
                     </div>
                     <div className="right-content">
-                        <Contactitem icon={Phone} title={"phone"} contact1={'0798979879023890'} contact2={'+789437130987'} />
-                        <Contactitem icon={Email} title={"phone"} contact1={'0798979879023890'} contact2={'+789437130987'} />
-                        <Contactitem icon={Address} title={"phone"} contact1={'0798979879023890'} contact2={'+789437130987'} />
+                        <Contactitem icon={Phone} title={"phone"} contact1={'01906629689'} contact2={''} />
+                        <Contactitem icon={Email} title={"Email"} contact1={'rh22012001@gmail.com'} contact2={''} />
+                        <Contactitem icon={Address} title={"Address"} contact1={'Bhairab, Dhaka, Bangladesh'} contact2={''} />
                     </div>
                 </InnerLayout>
             </ContactpageStyled >
@@ -106,6 +106,11 @@ const ContactpageStyled = styled.section`
             }
         }
         
+    }
+}
+@media screen and (max-width: 900px){
+    .Contact-section{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 `

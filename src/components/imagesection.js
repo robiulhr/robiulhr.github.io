@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import resume from '../img/img.jpg'
+import { InnerLayout } from '../styles/layouts'
 import Primarybutton from './primarybutton'
 function Imagesection() {
     return (
+        <InnerLayout>
         <ImagesectionStyled>
             <div className="left-content">
                 <img src={resume} alt="resume img" />
@@ -13,23 +15,28 @@ function Imagesection() {
                     <h4>I am <span>Lorem ipsum</span></h4>
                 </div>
                 <p className="paragraph">
-                    lorem ipsum dolor sit amet convfvriv ofbuvfb ioicv mkhifefc obfhgugfrkof hiovfgriofvn ifgjibvkvn goibhvnkmvkdghugvmckvmrihgivlvm oiufhgfmbc uhgvncb uirv j b   rvgbui oivu fjkldh cfrf  uiv f iournv rvjiue.
-                </p>
+                Hi,<br/>
+                I am a Web designer and junior label front End web developer. I have
+                over two years of experience working as a web designer and front-end
+                developer. I am an expert at HTML, CSS, javascript, jquery, bootstrap,
+                WordPress, react js, Material-UI, git(version controlling), and some other
+                technologies. also have a basic understanding of MERN Stack(React js,
+                Nodejs, Express js, Mongo DB) , Rest APIs, c language and java. I did many
+                projects with 100% of my client's satisfaction. Also, I am experienced in
+                making extensions for browsers like Chrome, Mozilla, and Brave.                </p>
                 <div className="about-info">
                     <div className="info-title">
                         <p>Full Name</p>
-                        <p>Age</p>
                         <p>Nationality</p>
                         <p>Language</p>
                         <p>Location</p>
                         <p>Services</p>
                     </div>
                     <div className="info">
-                        <p>Lorem ipsum</p>
-                        <p>22</p>
-                        <p>spanish</p>
-                        <p>Spanish, Franch,English</p>
-                        <p>London</p>
+                        <p>Robiul H.</p>
+                        <p>Bangladeshi</p>
+                        <p>Bangla, English, Hindi, Urdu</p>
+                        <p>Bangladesh</p>
                         <p>Freelance</p>
                     </div>
                 </div>
@@ -37,12 +44,14 @@ function Imagesection() {
                 <Primarybutton title="Download CV" />
             </div>
         </ImagesectionStyled>
+        </InnerLayout>
+
     )
 }
 const ImagesectionStyled = styled.div`
-margin-top: 5rem;
 display: flex;
 justify-content: space-between;
+flex-direction: row;
 .left-content{
     width: 50%;
     img{
@@ -83,6 +92,25 @@ justify-content: space-between;
             }
         }
     }
+}
+@media screen and (max-width: 1000px){
+    flex-direction: column;
+    .left-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .right-content{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+
 }
 `
 export default Imagesection

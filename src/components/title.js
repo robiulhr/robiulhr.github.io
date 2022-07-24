@@ -38,12 +38,27 @@ h2{
     }
     span{
         font-weight: 700;
-        color: rgba(25,29,43,44);
+        color: var(--title-shadow-text-color);
         font-size: 5rem;
         position: absolute;
         left: 3%;
         top: 20%;
         z-index: -1;
+    }
+}
+@media screen and (max-width: 800px){
+    span{
+        font-size: 4rem;
+    }
+}
+@media screen and (max-width: 700px){
+    span{
+        font-size: 3.5rem !important;
+    }
+}
+@media screen and (max-width: 500px){
+    span{
+        font-size: 3rem !important;
     }
 }
 `
