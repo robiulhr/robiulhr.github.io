@@ -20,6 +20,13 @@ function App() {
   const [checked,setChecked] = useState(JSON.parse(localStorage.getItem('themeStatus')));
   const [sidebarStatus,setSideBarStatus] = useState(true);
 
+
+  // disabling the context menu(right click)
+  useEffect(() => {
+    document.addEventListener('contextmenu', (e)=>e.preventDefault());      
+  }, []);
+
+  // theme changer 
   function getLocatThemeData (){
     // setter
     localStorage.setItem('themeStatus', JSON.stringify(checked));
@@ -37,8 +44,8 @@ function App() {
   useEffect(() => {
     const themeItem = JSON.parse(localStorage.getItem('themeData'));
     if (!themeItem) {
-      localStorage.setItem('themeData', JSON.stringify(theme));
-      localStorage.setItem('themeStatus', JSON.stringify(checked));
+      localStorage.setItem('themeData', JSON.stringify("dark-theme"));
+      localStorage.setItem('themeStatus', JSON.stringify("false"));
     }
     getLocatThemeData();
   }, []);
