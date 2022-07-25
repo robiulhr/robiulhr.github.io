@@ -16,17 +16,38 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 
 function App() {
-  const [theme,setTheme ] = useState("dark-theme");
-  const [checked,setChecked] = useState(false);
+  const [theme,setTheme ] = useState(JSON.parse(localStorage.getItem('themeData')));
+  const [checked,setChecked] = useState(JSON.parse(localStorage.getItem('themeStatus')));
   const [sidebarStatus,setSideBarStatus] = useState(true);
-  useEffect(() => {
-    document.documentElement.className = theme;
 
-  }, [theme]);
+  function getLocatThemeData (){
+    // setter
+    localStorage.setItem('themeStatus', JSON.stringify(checked));
+    // getter
+   const themeItem =  JSON.parse(localStorage.getItem('themeData'));  
+   document.documentElement.className = themeItem;
+
+  }
+  useEffect(() => {
+    // setter
+    localStorage.setItem('themeData', JSON.stringify(theme));
+    getLocatThemeData()
+  }, [theme,checked]);
+
+  useEffect(() => {
+    const themeItem = JSON.parse(localStorage.getItem('themeData'));
+    if (!themeItem) {
+      localStorage.setItem('themeData', JSON.stringify(theme));
+      localStorage.setItem('themeStatus', JSON.stringify(checked));
+    }
+    getLocatThemeData();
+  }, []);
 
   const sideBarOpenClose= ()=> sidebarStatus? setSideBarStatus(false): setSideBarStatus(true);
+
   const themeToggler=()=>{
-    if(theme==="light-theme"){
+    const themeItem = JSON.parse(localStorage.getItem('themeData'))
+    if(themeItem==="light-theme"){
       setTheme("dark-theme");
       setChecked(false)
     }else{
