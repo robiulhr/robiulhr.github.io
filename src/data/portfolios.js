@@ -62,7 +62,7 @@ const portfolios = [
     },
     {
         id:5,
-        catagory:"javascript",
+        catagory:"Javascript",
         image:img5,
         link1:"https://github.com/robiulhr/Pig-game",
         link2:"https://robiulhr.github.io/Pig-game/",
@@ -80,7 +80,7 @@ const portfolios = [
     },
     {
         id:7,
-        catagory:"javascript",
+        catagory:"Javascript",
         image:img7,
         link1:"https://github.com/robiulhr/Guess-my-number",
         link2:"https://robiulhr.github.io/Guess-my-number/",
@@ -98,7 +98,7 @@ const portfolios = [
     },
     {
         id:9,
-        catagory:"javascript",
+        catagory:"Javascript",
         image:img9,
         link1:"https://github.com/robiulhr/audio-player",
         link2:"https://robiulhr.github.io/audio-player/",
@@ -126,7 +126,7 @@ const portfolios = [
     ,
     {
         id:12,
-        catagory:"javascript",
+        catagory:"Javascript",
         image:img12,
         link1:"https://github.com/robiulhr/picture-in-picture",
         link2:"https://robiulhr.github.io/picture-in-picture/",
@@ -135,7 +135,7 @@ const portfolios = [
     },
     {
         id:13,
-        catagory:"javascript",
+        catagory:"Javascript",
         image:img13,
         link1:"https://github.com/robiulhr/Quate-ganerator",
         link2:"https://robiulhr.github.io/Quate-ganerator/",

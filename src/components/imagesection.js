@@ -24,7 +24,7 @@ function Imagesection () {
             jquery, bootstrap, react js, Material-UI, git(version controlling),
             and some other technologies. also have a basic understanding of MERN
             Stack(React js, Nodejs, Express js, Mongo DB) , Rest APIs and c
-            language. I passionate about writing reusable code, to get my skill
+            language. I am passionate about writing reusable code, to get my skill
             better level I developed a few javascript libraries which are
             available on npm(node package manager). I did many projects with
             100% of my client's satisfaction. Also, I am experienced in making
