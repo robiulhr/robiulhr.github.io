@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components'
-import avatar from '../img/img01.jpg';
+import avatar from '../img/robiul-hasan-professional-frontend-developer.png';
 import Tilty from 'react-tilty';
 
 function Navigation() {
@@ -62,6 +62,7 @@ position: relative;
         padding: 1rem 0;
         img{
             width: 70%;
+            object-fit: cover;
             border-radius: 50%;
             border: 8px solid var(--border-color);
             
